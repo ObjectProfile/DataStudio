@@ -1,0 +1,15 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #configuration : 'DataStudio',
+      #repository : 'http://smalltalkhub.com/mc/ObjectProfile/DataStudio/main/',
+      #load : [ 'default' ],
+      #platforms : [ #pharo ],
+      #version: #development
+    }
+  ],
+
+  #testing : {
+   #packages : [ 'DataStudio', 'DataStudio-CProjectVisualizer', 'DataStudio-PythonAnalyzer' ]
+   }
+}
