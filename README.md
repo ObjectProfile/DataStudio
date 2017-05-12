@@ -7,4 +7,4 @@ Gofer it
     smalltalkhubUser: 'ObjectProfile' project: 'DataStudio';
     configurationOf: 'DataStudio';
     loadDevelopment
-`
+```
