@@ -1,6 +1,10 @@
 # DataStudio
+DataStudio is an interactive graphical environment for software and data manipulation. Visualization are built without 
 
-DataStudio is a new graphical environment for software and data manipulation.
+It is built on top of [Roassal](https://AgileVisualization.com/), an expressive library written in the [Pharo programming language](http://pharo.org).
+
+## Installation
+You can load Data studio by executing the following incantation in a playground:
 
 ```Smalltalk
 Gofer it
