@@ -9,8 +9,8 @@ DataStudio is built on top of [Roassal](https://AgileVisualization.com/), an exp
 You can load Data studio by executing the following incantation in a playground:
 
 ```Smalltalk
-Gofer it
-    smalltalkhubUser: 'ObjectProfile' project: 'DataStudio';
-    configurationOf: 'DataStudio';
-    loadDevelopment
+Metacello new
+    baseline: 'DataStudio';
+    repository: 'github://akevalion/DataStudio';
+    load.
 ```
