@@ -34,11 +34,12 @@ CAAbstractShapeAction >> execute [
 CAAbstractShapeAction >> executeUsing: anExpressionAsString [
 	| relevantElements inputBlock |
 	relevantElements := self currentElements.
-	relevantElements isEmpty ifTrue: [ ^ self ].
-	
-	inputBlock := Compiler evaluate: anExpressionAsString.
+	relevantElements isEmpty
+		ifTrue: [ ^ self ].
+	inputBlock := OpalCompiler new
+		source: anExpressionAsString;
+		evaluate.
 	self doExecute: inputBlock on: relevantElements.
-
 	self resetExpressionAsString
 ]
 

@@ -51,11 +51,12 @@ CAAddEdgeAction >> execute [
 { #category : #hooks }
 CAAddEdgeAction >> executeUsing: anExpressionAsString [
 	| result |
-	result := Compiler evaluate: anExpressionAsString.
+	result := OpalCompiler new
+		source: anExpressionAsString;
+		evaluate.
 	(result notNil and: [ result isSymbol or: [ result isBlock ] ])
 		ifTrue: [ self processBlock: result ].
 	self resetExpressionAsString
-		
 ]
 
 { #category : #accessing }

@@ -41,8 +41,11 @@ CAAddElementAction >> executeUsing: anExpressionAsString [
 	"Public method - Main entry point
 	
 	The method takes a Pharo expression as argument."
+
 	| result |
-	result := Compiler evaluate: anExpressionAsString.
+	result := OpalCompiler new
+		source: anExpressionAsString;
+		evaluate.
 	(result notNil and: [ result isCollection ])
 		ifTrue: [ self processObjects: result ].
 	self resetExpressionAsString

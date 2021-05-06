@@ -23,7 +23,7 @@ CAAddGroupAction >> executeUsing: anExpressionAsString [
 	"titled as the expression"
 	"We give a color to the elements"
 	"Add it to the artword (which also has the effect of selecting the group, and therefore give a color to it)"
-	aBlock := Compiler evaluate: anExpressionAsString.
+	aBlock := OpalCompiler evaluate: anExpressionAsString.
 	self processBlock: aBlock.
 	self resetExpressionAsString
 ]
