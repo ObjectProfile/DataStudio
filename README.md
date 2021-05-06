@@ -11,6 +11,6 @@ You can load Data studio by executing the following incantation in a playground:
 ```Smalltalk
 Metacello new
     baseline: 'DataStudio';
-    repository: 'github://akevalion/DataStudio';
+    repository: 'github://ObjectProfile/DataStudio';
     load.
 ```
